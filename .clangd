@@ -1,0 +1,2 @@
+CompileFlags:
+  Add: [-I\\wsl.localhost\Ubuntu\usr\local\include]
