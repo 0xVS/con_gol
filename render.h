@@ -1,0 +1,7 @@
+#ifndef RENDER_H
+#define RENDER_H
+#include "board.h"
+
+void render_board(const Board *board, int cell_size);
+
+#endif
