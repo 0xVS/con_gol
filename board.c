@@ -33,13 +33,12 @@ static inline bool is_in_bounds(const Board *board, int x, int y) {
     index = y * width + x;
  */
 bool board_get(Board *board, int x, int y) {
-  if (is_in_bounds(board, x, y)) {
-    return board->cells[y * board->width + x];
-  } else
+  if (!is_in_bounds(board, x, y)) return false;
+  return board->cells[y * board->width + x];
 }
 
 void board_set(Board *board, int x, int y, bool state) {
-  board->cells[y * board->width + x]
+  board->cells[y * board->width + x];
 }
 
 void board_step(Board *board) {}
@@ -54,5 +53,12 @@ void board_step(Board *board) {}
  */
 int count_neighbours(Board *board, int x, int y) {
   int counter = 0;
-  for (;;){}
+  for (int i = 0; i <= x; i++) {
+    for (int j = 0; j <= y; j++) {
+    // if cell itself then continue
+      if (i == 1 && j == 1) continue;
+
+      if (board_get(board, i, j))
+    }
+  }
 }
