@@ -9,6 +9,15 @@ typedef struct {
   bool *cells;
 } Board;
 
+typedef enum {
+  UNDERPOPULATION,
+  SURVIVAL,
+  OVERPOPULATION,
+  REPRODUCTION,
+  STAYS_DEAD
+} GOLRules;
+
+
 Board board_create(int width, int height);
 // passing in pointer to struct rather than struct itself
 void board_destroy(Board *board);
